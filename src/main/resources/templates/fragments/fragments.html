@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="common-head">
+    <meta charset="UTF-8"/>
+    <title>Vokabeltrainer</title>
+    <meta content="IE=11" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <link rel="icon" th:href="@{/favicon.ico}" type="image/x-icon">
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.5.3/css/bootstrap.min.css} "/>
+    <link rel="stylesheet" th:href="@{/css/style.css}" type="text/css"/>
+    <link rel="stylesheet" th:src="@{/webjars/font-awesome/5.15.1/css/all.min.css}" type="text/css"/>
+    <script th:src="@{/webjars/jquery/3.5.1/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/1.16.0/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.5.3/js/bootstrap.min.js}"></script>
+    <script th:src="@{/webjars/font-awesome/5.15.1/js/all.min.js}"></script>
+</head>
+<body>
+<header th:fragment="common-header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="navbar-header">
+            <a class="navbar-brand" data-placement="top" data-toggle="tooltip" href="/" title="zur &Uuml;bersicht">
+                <p class="navbar-text" th:text="${titleMessage}">...</p>
+            </a>
+
+        </div>
+        <button aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler"
+                data-target="#navbarNavAltMarkup" data-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 justify-content-end">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">&Uuml;berblick <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/start">Start</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<div th:fragment="common-messages">
+    <div th:if="${errorMessage != null}">
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <span th:text="${errorMessage}">...</span>
+            <button aria-label="Close" class="close" data-dismiss="alert" type="button">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+
+    <div th:if="${successMessage != null}">
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <span th:text="${successMessage}">...</span>
+            <button aria-label="Close" class="close" data-dismiss="alert" type="button">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+</div>
+<div th:fragment="common-jumbotron">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Vokabeltrainer</h1>
+            <p class="lead">Einfacher Vokabeltrainer DEU -> ENG</p>
+        </div>
+    </div>
+</div>
+<div th:fragment="next">
+    <div th:if="${model != null}">
+        <div class="row">
+            <div class="col-md-10">
+                <div class="card" style="margin-top: 20px;">
+                    <div class="card-header">
+                        <h5>Deutsch -> English</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="model" method="POST" name="model"
+                              th:action="@{/result}" th:object="${model}">
+                            <input id="id" name="id" th:field="*{id}" type="hidden">
+                            <input id="target" name="target" th:field="*{target}" type="hidden">
+                            <div class="form-group">
+                                <label for="source">Deutsch:</label>
+                                <input class="form-control" form="model"
+                                       id="source" name="source"
+                                       readonly
+                                       th:field="*{source}"
+                                       type="text"/>
+                                </input>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="input">Englisch:</label>
+                                <input autofocus class="form-control" form="model"
+                                       id="input"
+                                       name="input"
+                                       th:field="*{input}"
+                                       type="text"/>
+                                </input>
+                                <small class="form-text text-muted-error" id="messageToBeEncodedHelp"
+                                       th:errors="*{input}"
+                                       th:if="${#fields.hasErrors('input')}"/>
+                            </div>
+                            <button autofocus class="btn btn-primary btn-block" data-placement="top"
+                                    data-toggle="tooltip"
+                                    title="pr&uuml;fen">
+                                pr&uuml;fen &raquo;
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:fragment="result">
+    <div th:if="${model != null}">
+        <div class="row">
+            <div class="col-md-10">
+                <div class="card" style="margin-top: 20px;">
+                    <div class="card-header">
+                        <h5>Deutsch -> English</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="model" method="POST" name="model"
+                              th:action="@{/result}" th:object="${model}">
+                            <input id="id" name="id" th:field="*{id}" type="hidden">
+                            <input id="target" name="target" th:field="*{target}" type="hidden">
+
+                            <div class="form-group">
+                                <label for="source">Deutsch:</label>
+                                <input class="form-control" form="model"
+                                       id="source" name="source"
+                                       readonly
+                                       th:field="*{source}"
+                                       type="text"/>
+                                </input>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="input">Englisch:</label>
+                                <input class="form-control" form="model"
+                                       id="input"
+                                       name="input"
+                                       th:field="*{input}"
+                                       type="text"/>
+                                </input>
+                                <small class="form-text text-muted-error" id="messageToBeEncodedHelp"
+                                       th:errors="*{input}"
+                                       th:if="${#fields.hasErrors('input')}"/>
+                            </div>
+
+                            <div th:if="${model.isNext == false}">
+                                <div class="form-group">
+                                    <label for="target">L&ouml;sung:</label>
+                                    <input class="form-control" form="model"
+                                           id="target" name="target"
+                                           readonly
+                                           th:field="*{target}"
+                                           type="text"/>
+                                    </input>
+
+                                </div>
+                            </div>
+                            <a autofocus class="btn btn-primary" data-placement="top" data-toggle="tooltip"
+                               href="/start"
+                               role="button"
+                               title="Generate">Weiter &raquo;</a>
+
+                            <!--                            <div th:if="${model.isNext == true}">-->
+                            <!--                                <a class="btn btn-primary" autofocus data-placement="top" data-toggle="tooltip" href="/start"-->
+                            <!--                                   role="button"-->
+                            <!--                                   title="Generate">Weiter &raquo;</a>-->
+                            <!--                            </div>-->
+                            <!--                            <div th:if="${model.isNext == false}">-->
+                            <!--                                <button class="btn btn-primary btn-block" data-placement="top" data-toggle="tooltip"-->
+                            <!--                                        title="P&uuml;fen">-->
+                            <!--                                    Pr&uuml;fen &raquo;-->
+                            <!--                                </button>-->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer" th:fragment="common-footer">
+    <div class="container">
+        <div th:if="${appInfo != null}">
+            <span class="text-center align-middle" th:text="${appInfo}">...</span>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
