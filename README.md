@@ -15,7 +15,7 @@ Build & run
 ./src/main/resources/application.properties
 ```
 
-Die Liste decr Vokabeln kann in der Datei 
+Die Liste der Vokabeln kann in der Datei 
 
 ```bash
 ./src/main/resources/data.csv
@@ -43,7 +43,7 @@ mvn spring-boot:run
 
 um die Anwendung auszuführen.
 
-Anwendung ist im Browser unter der URL
+Die Anwendung ist im Browser unter der URL
 
 ```bash
 http://localhost:8080
