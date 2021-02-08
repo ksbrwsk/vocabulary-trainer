@@ -2,6 +2,7 @@ package de.ksbrwsk.vocabulary;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.core.io.Resource;
@@ -65,6 +66,7 @@ public class DatabaseInitializr {
 
     private String[] splitVcTuple(String s) {
         log.info("Datenzeile splitten -> {}", s);
+        s = s.replaceAll("(\r\n|\r)", "");
         return s.split(";");
     }
 }
