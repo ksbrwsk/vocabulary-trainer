@@ -2,12 +2,12 @@ package de.ksbrwsk.vocabulary;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import org.apache.commons.io.FileUtils;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
+import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StreamUtils;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -21,6 +21,7 @@ import static java.util.stream.Collectors.toList;
 public class DatabaseInitializr {
 
     private final VocabularyRepository vocabularyRepository;
+    private final ApplicationProperties applicationProperties;
 
     @EventListener(ApplicationReadyEvent.class)
     public void process() throws IOException {
@@ -34,8 +35,10 @@ public class DatabaseInitializr {
 
     private void processData() throws IOException {
         log.info("Vokabeln einlesen und Datenbank initialisieren...");
-        Resource resource = new ClassPathResource("/data.csv");
-        List<String> strings = FileUtils.readLines(resource.getFile(), StandardCharsets.UTF_8);
+        Resource resource = new UrlResource(applicationProperties.getDataFileUrl());
+        String str =  StreamUtils.copyToString(resource.getInputStream(),StandardCharsets.UTF_8);
+        String[] tmp = str.split("\n");
+        List<String> strings = List.of(tmp);
         List<VocabularyTupel> vcs = strings
                 .stream()
                 .skip(1) // headers

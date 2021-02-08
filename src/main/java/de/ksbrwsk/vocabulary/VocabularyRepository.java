@@ -15,7 +15,7 @@ public class VocabularyRepository {
     private static final ConcurrentMap<Long, VocabularyTupel> VOCABULARY = new ConcurrentHashMap<>();
 
     public void addTupel(VocabularyTupel vocabularyTupel) {
-        log.info("füg Tupel hinzu {}", vocabularyTupel.getId());
+        log.info("füge Tupel hinzu {}", vocabularyTupel.getId());
         VOCABULARY.put(vocabularyTupel.getId(), vocabularyTupel);
     }
 
