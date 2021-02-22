@@ -3,10 +3,13 @@ package de.ksbrwsk.vocabulary;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StreamUtils;
 
@@ -24,21 +27,17 @@ public class DatabaseInitializr {
     private final VocabularyRepository vocabularyRepository;
     private final ApplicationProperties applicationProperties;
 
+    @Scheduled(fixedRateString = "${application.dataRefreshInterval}")
     @EventListener(ApplicationReadyEvent.class)
     public void process() throws IOException {
-        boolean initialized = this.isDatabaseInitialized();
-        if (!initialized) {
-            this.processData();
-        } else {
-            log.info("Vokabeln bereits eingelesen, Initialisierung nicht notwendig.");
-        }
+        this.processData();
     }
 
     private void processData() throws IOException {
         String dataFileUrl = applicationProperties.getDataFileUrl();
         log.info("Vokabeln einlesen und Datenbank initialisieren. Quelle: {}", dataFileUrl);
         Resource resource = new UrlResource(dataFileUrl);
-        String str =  StreamUtils.copyToString(resource.getInputStream(),StandardCharsets.UTF_8);
+        String str =  StreamUtils.copyToString(resource.getInputStream(),StandardCharsets.ISO_8859_1);
         String[] tmp = str.split("\n");
         List<String> strings = List.of(tmp);
         List<VocabularyTupel> vcs = strings
@@ -48,16 +47,11 @@ public class DatabaseInitializr {
                 .map(this::createTupel)
                 .collect(toList());
 
+        this.vocabularyRepository.reset();
         for (VocabularyTupel tuple : vcs) {
             this.vocabularyRepository.addTupel(tuple);
         }
         log.info("Datenbank erfolgreich initialisiert.");
-    }
-
-    private boolean isDatabaseInitialized() {
-        log.info("Prüfen ob die Datenbank initialisiert ist...");
-        int count = this.vocabularyRepository.count();
-        return count > 0;
     }
 
     private VocabularyTupel createTupel(String[] vTuple) {

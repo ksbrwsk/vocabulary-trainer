@@ -13,4 +13,5 @@ public class ApplicationProperties {
     private String title;
     private String appInfo;
     private String dataFileUrl;
+    private String dataRefreshInterval;
 }

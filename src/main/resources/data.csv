@@ -2,44 +2,44 @@ ID;GERMAN;ENGLISH
 1;hallo;hello
 2;Vater;father
 3;Tisch;table
-4;ausrÃ¤umen, (ent)leeren;empty
-5;GeschirrspÃ¼lmaschine;dishwasher
+4;ausräumen, (ent)leeren;empty
+5;Geschirrspülmaschine;dishwasher
 6;hinausbringen;take out
-7;MÃ¼ll;rubbish
+7;Müll;rubbish
 8;staubsaugen;hoover
 9;was noch, was sonst;what else
 10;stehen, hier ertragen;stand
 11;jemand kann es kaum erwarten;somebody cannot wait
 12;Gebiet, Region;area
-13;nÃ¶rdlich, Nord;north
-14;StraÃŸe;street
+13;nördlich, Nord;north
+14;Straße;street
 15;Auto;car
 16;kein(e);no
 17;Baum;tree
 18;Spielplatz;playground
-19;GeschÃ¤ft, Laden;shop
+19;Geschäft, Laden;shop
 20;Eltern;parents
 21;verkaufen;sell
 22;zum Beispiel;for example
 23;Schlafzimmer;bedroom
 24;Wohnzimmer;living room
-25;KÃ¼che;kitchen
+25;Küche;kitchen
 26;leise, ruhig;quiet
 27;Garten;garden
 28;freundlich;friendly
 29;nah(e);near
 30;Kino;cinema
 31;Zentrum, Center;central
-32;berÃ¼hmt;famous
+32;berühmt;famous
 33;kaufen;buy
 34;auch;also
 35;benutzen;use
 36;Ort, Platz;place
-37;GebÃ¤ude;building
+37;Gebäude;building
 38;(Fahr)rad;bike
 39;skaten, Skateboard fahren;skate
 40;Spielzeug;toy
-41;SÃ¼ÃŸigkeit;sweet
+41;Süßigkeit;sweet
 42;chaotisch, durcheinander sein;be a mess
 43;dann;then
 44;(mit)nehmen;take
@@ -50,9 +50,9 @@ ID;GERMAN;ENGLISH
 49;Bett;bed
 50;Kleiderschrank;wardrobe
 51;Teller;plate
-52;Lšffel;spoon
+52;Löffel;spoon
 53;Ei;egg
-54;hei§;hot
+54;heiß;hot
 55;Tee;tea
 56;eigene(r,s);own
 57;essen;eat
@@ -74,11 +74,319 @@ ID;GERMAN;ENGLISH
 73;lustig, witzig;fun
 74;fernsehen;watch TV
 75;Uhrzeit;time
-76;beenden, aufhšren;finnish
-77;bei, in der NŠhe, mit;by
+76;beenden, aufhören;finnish
+77;bei, in der Nähe, mit;by
 78;hier, vor;to
 79;Nacht;night
 80;sehr;very
 81;Wie viel Uhr ist es?;What time is it?
 82;Fragen stellen;ask questions
 83;Minute;minute
+84;auflisten;list
+85;am Nachmittag;in the afternoon
+86;Geschichte;history
+87;Stunde;lesson
+88;wen, wem;who
+89;deshalb, also;so
+90;Thema;subject
+91;nie(mals);never
+92;verpassen, vermissen;miss
+93;müde;tired
+94;mögen, genießen;enjoy
+95;gewöhnlich, normalerweise;usually
+96;schreiben;write
+97;langweilig;boring
+98;Englisch;English
+99;gut in etwas sein;be good at
+100;tagträumen;daydream
+101;groß;big
+102;Bühne;stage
+103;Fräulein;miss
+104;alt;old
+105;Stundenplan;timetable
+106;nachschlagen;look up
+107;Jahr;year
+108;Anmeldung;registration
+109;Mathe;maths
+110;Schauspielerei;drama
+111;Dienstag;Tuesday
+112;Informatik;ICT
+113;Naturwissenschaft;science
+114;Religion;religion
+115;Mittwoch;Wednesday
+116;Donnerstag;Thursday
+117;willkommen;welcome
+118;was;what
+119;können;can
+120;sehen;see
+121;ich;I
+122;ein/e;a/an
+123;es gibt, da ist;there is
+124;es gibt, da sind;there are
+125;hören;hear
+126;(zu)hören;listen to
+127;und;and
+128;zeigen/deuten;point
+129;der/die/das;the
+130;mitlesen;read along
+131;mein(e);my
+132;Name;name
+133;ich heiße;my name is
+134;wir;we
+135;"zu; auch";too
+136;von, aus;from
+137;hallo, hi;hello
+138;leben, wohnen;live
+139;in;in
+140;aber;but
+141;jetzt;now
+142;Was ist mit;what about
+143;diese(r, s);this
+144;sprechen, reden;talk
+145;über;about
+146;diese ;these
+147;er;he
+148;sie;she
+149;wo(hin);where
+150;sie (Mehrzahl);they
+151;alle(s);all
+152;sagen;say
+153;dein(e), euer/eure;your
+154;Klassenkamerad(in);classmate
+155;Wie heißt du?;What's your name?
+156;Wie alt boist du?;How old are you?
+157;und;and
+158;Wo kommst du her?;Where are you from?
+159;fertig, bereit;ready
+160;für;for
+161;dann;then
+162;Auf geht's!;Come on!
+163;singen;sing
+164;viel, jede Menge;lots of
+165;Spaß;fun
+166;mir, mich;me
+167;buchstabieren;spell
+168;"das; der / die /das";that
+169;von;of
+170;jemand;somebody
+171;wer;who
+172;(er)raten;guess
+173;es;it
+174;zuerst, als Erstes;first
+175;nein;no
+176;falsch;wrong
+177;ja;yes
+178;richtig;right
+179;Thema, Lektion, Kapitel;theme
+180;neu;new
+181;betrachten, sehen;look at
+182;Bild, Foto;picture
+183;haben;have got
+184;Zwilling;twin
+185;Bruder;brother
+186;lustig, witzig;funny
+187;klein;small
+188;Haus;house
+189;mit;with
+190;unser(e);our
+191;Mama, Mutti;mom
+192;Papa, Vati;dad
+193;Kaninchen;rabbit
+194;Hund;dog
+195;mögen;like
+196;Lieblings-É;favourite
+197;Essen;food
+198;Getränk;drink
+199;Limonade;lemonade
+200;Fußball;football
+201;Tanzen;dancing
+202;Musik ;music
+203;Zimmer;room
+204;tschüss;bye
+205;arbeiten;work
+206;Gruppe;group
+207;Gespräch, Dialog;dialogue
+208;Freund/in;friend
+209;Straße;road
+210;sehen, schauen;look
+211;dort, da;there
+212;treffen, kennenlernen;meet
+213;Leute, Menschen;people
+214;erzählen;tell
+215;Frankreich;France
+216;Deutschland;Germany
+217;Moskau;Moscow
+218;Russland;Russia
+219;Türkei;Turkey
+220;Telefon;phone
+221;(Telefon)anruf;phone call
+222;wer;who
+223;wieder, noch einmal;again
+224;verstehen;understand
+225;besuchen;visit
+226;machen, tun;do
+227;herausfinden;find out
+228;Schule;school
+229;Buch;book
+230;lesen;read
+231;überprüfen, kontrollieren;check
+232;lesen;read
+233;Antwort;answer
+234;schön, angenehm;nice
+235;es;it
+236;viele;many
+237;"lieben; sehr mögen";love
+238;Fantasie;phantasy
+239;Geschichte, Erzählung;story
+240;beste(r, s);best
+241;ja;yeah
+242;groß, riesig;great
+243;spielen;play
+244;Sonntag;Sunday
+245;gut;good
+246;Idee;idea
+247;"einige; etwas";some
+248;nicht;not
+249;oder;or
+250;hinzufügen;add
+251;Information;information
+252;in, nach, zu;to
+253;Zahl, Ziffer, Nummer;number
+254;"fragen; bitten";ask
+255;welche(r, s);what
+256;"Sport; Sportart";sports
+257;oder;or
+258;danke;thanks
+259;Wie geht es dir?;How are you?
+260;Mädchen;girl
+261;Junge;boy
+262;ihrÛ;their
+263;manchmal;sometimes
+264;"zusammen;gemeinsam";together
+265;"selbst;sogar";even
+266;Gitarre;guitar
+267;müssen;have to
+268;oft, häufig;often
+269;sprechen, reden;talk to
+270;sie, ihnen;them
+271;"sehr;viel(e)";a lot of
+272;andere(r, s);other
+273;Goldfisch;goldfish
+274;sein(e, r);his
+275;Katze;cat
+276;Frau (Anrede);Mrs
+277;denken, glauben ;think
+278;morgen;tomorrow
+279;nervös;nervous
+280;sich erinnern;remember
+281;zuordnen;match
+282;Satz;sentence
+283;Anfang, Beginn;start
+284;Freitag;Friday
+285;Morgen;morning
+286;berühren;touch
+287;Teil;part
+288;Viertel (vor/nach);quarter (to/past)
+289;bürsten;brush
+290;Zahn;tooth
+291;Zahnpasta;toothpaste
+292;(sich) waschen;wash
+293;Gesicht;face
+294;Fuß;foot
+295;Bein;leg
+296;Ohr;ear
+297;kämmen;comb
+298;Bad(ezimmer);bathroom
+299;Früstück;breakfast
+300;gehen;go
+301;Arbeit;work
+302;Schlüssel;key
+303;sich beeilen;hurry up
+304;glücklich, froh;glad
+305;Samstag;Saturday
+306;Szene;scene
+307;Rücken, Rückseite;back
+308;Bauchnabel;belly button
+309;Gesäß, Hinterteil;bottom
+310;Kopf;head
+311;Mund;mouth
+312;Nase;nose
+313;Schulter;shoulder
+314;"Bauch; Magen";stomach
+315;Zeh(e);toe
+316;zeichnen;draw
+317;Außerirdische(r), Alien;alien
+318;dreckig, schmutzig;dirty
+319;wenn, falls;if
+320;"wissen; kennen";know
+321;wirklich;really
+322;(sich) (ver)ändern;change
+323;saucber machen, reinigen;clean
+324;Spigel;mirror
+325;groß;large
+326;lang;long
+327;"Antenne; Fühler";antenna
+328;hässlich;ugly
+329;was für ein(e);what a
+330;gutaussehend;good-looking
+331;Kerl, Typ;guy
+332;start;strong
+333;Superheld;superhero
+334;dunkel;dark
+335;ich;me
+336;Herr (Anrede);Mr
+337;perfekt;perfect
+338;welche(r, s);which
+339;beschreiben;describe
+340;dich, dir/selbst;yourself
+341;jemand ander;someone else
+342;lassen;let
+343;Was gibt es zum ...?;What's for É?
+344;(Uhr)zeit;time
+345;auf English;in English
+346;sammeln;collect
+347;hungrig;hungry
+348;(Schinken)speck;bacon
+349;Tisch;table
+350;Milch;milk
+351;Marmelade;jam
+352;Honig;honey
+353;Saft;juice
+354;wollen;want
+355;Wurst, Würstchen;sausage
+356;Messer;knife
+357;Gabel;fork
+358;auswählen;choose
+359;Aktivität;activity
+360;schreiben;write
+361;Pappe, Karte;card
+362;Klassenzimmer;classroom
+363;Person;person
+364;an (jdn / etw) denken;think about
+365;Farbe;colour
+366;befragen;interview
+367;aufnehmen;record
+368;spielen, vorspielen;play
+369;Frage;question
+370;Ding, Gegenstand;thing
+371;Lehrer/in;teacher
+372;Student/in;student
+373;(Feder)mäppchen;pencil case
+374;Heft;exercise book
+375;Lineal;ruler
+376;Schreibtisch;desk
+377;Stift;pen
+378;Schere;scissors
+379;Bücherregal;bookcase
+380;Radiergummi;rubber
+381;Hausaufgaben;homework
+382;Papier;paper
+383;Stuhl;chair
+384;(Land)karte;map
+385;Bleistift;pencil
+386;Kalender;calender
+387;Mülleimer;bin
+388;Mappe, Schnellhefter;folder
+389;Schultasche;schoolbag
+390;auf Deutsch;in German
+391;Verzeihung, Entschuldigung;sorry

@@ -14,8 +14,9 @@ public class VocabularyRepository {
 
     private static final ConcurrentMap<Long, VocabularyTupel> VOCABULARY = new ConcurrentHashMap<>();
 
+    private final Random random = new Random();
+
     public void addTupel(VocabularyTupel vocabularyTupel) {
-        log.info("füge Tupel hinzu {}", vocabularyTupel.getId());
         VOCABULARY.put(vocabularyTupel.getId(), vocabularyTupel);
     }
 
@@ -24,18 +25,12 @@ public class VocabularyRepository {
         return VOCABULARY.get(id);
     }
 
-    public Collection<VocabularyTupel> getAllTupels() {
-        log.info("hole alle Tupel");
-        return VOCABULARY.values();
-    }
-
     public int count() {
         return VOCABULARY.size();
     }
 
     public VocabularyTupel random() {
         int count = this.count();
-        Random random = new Random();
         long i = random.nextInt(count);
         VocabularyTupel tupel = this.getTupel(i);
         while (tupel == null) {
@@ -43,5 +38,9 @@ public class VocabularyRepository {
             tupel = this.getTupel(i);
         }
         return tupel;
+    }
+
+    public void reset() {
+        VOCABULARY.clear();
     }
 }
