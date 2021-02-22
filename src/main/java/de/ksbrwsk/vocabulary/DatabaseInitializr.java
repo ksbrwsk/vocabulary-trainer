@@ -35,8 +35,9 @@ public class DatabaseInitializr {
     }
 
     private void processData() throws IOException {
-        log.info("Vokabeln einlesen und Datenbank initialisieren...");
-        Resource resource = new UrlResource(applicationProperties.getDataFileUrl());
+        String dataFileUrl = applicationProperties.getDataFileUrl();
+        log.info("Vokabeln einlesen und Datenbank initialisieren. Quelle: {}", dataFileUrl);
+        Resource resource = new UrlResource(dataFileUrl);
         String str =  StreamUtils.copyToString(resource.getInputStream(),StandardCharsets.UTF_8);
         String[] tmp = str.split("\n");
         List<String> strings = List.of(tmp);
