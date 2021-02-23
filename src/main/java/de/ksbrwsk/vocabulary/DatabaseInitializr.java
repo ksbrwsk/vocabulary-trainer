@@ -28,7 +28,6 @@ public class DatabaseInitializr {
     private final ApplicationProperties applicationProperties;
 
     @Scheduled(fixedRateString = "${application.dataRefreshInterval}")
-    @EventListener(ApplicationReadyEvent.class)
     public void process() throws IOException {
         this.processData();
     }
@@ -37,7 +36,7 @@ public class DatabaseInitializr {
         String dataFileUrl = applicationProperties.getDataFileUrl();
         log.info("Vokabeln einlesen und Datenbank initialisieren. Quelle: {}", dataFileUrl);
         Resource resource = new UrlResource(dataFileUrl);
-        String str =  StreamUtils.copyToString(resource.getInputStream(),StandardCharsets.ISO_8859_1);
+        String str = StreamUtils.copyToString(resource.getInputStream(), StandardCharsets.ISO_8859_1);
         String[] tmp = str.split("\n");
         List<String> strings = List.of(tmp);
         List<VocabularyTupel> vcs = strings
