@@ -133,7 +133,7 @@ ID;GERMAN;ENGLISH
 132;Name;name
 133;ich heiße;my name is
 134;wir;we
-135;"zu; auch";too
+135;zu, auch;too
 136;von, aus;from
 137;hallo, hi;hello
 138;leben, wohnen;live
@@ -166,7 +166,7 @@ ID;GERMAN;ENGLISH
 165;Spaß;fun
 166;mir, mich;me
 167;buchstabieren;spell
-168;"das; der / die /das";that
+168;das, der / die /das;that
 169;von;of
 170;jemand;somebody
 171;wer;who
@@ -194,7 +194,7 @@ ID;GERMAN;ENGLISH
 193;Kaninchen;rabbit
 194;Hund;dog
 195;mögen;like
-196;Lieblings-É;favourite
+196;Lieblings-*;favourite
 197;Essen;food
 198;Getränk;drink
 199;Limonade;lemonade
@@ -235,7 +235,7 @@ ID;GERMAN;ENGLISH
 234;schön, angenehm;nice
 235;es;it
 236;viele;many
-237;"lieben; sehr mögen";love
+237;lieben, sehr mögen;love
 238;Fantasie;fantasy
 239;Geschichte, Erzählung;story
 240;beste(r, s);best
@@ -245,31 +245,31 @@ ID;GERMAN;ENGLISH
 244;Sonntag;Sunday
 245;gut;good
 246;Idee;idea
-247;"einige; etwas";some
+247;einige, etwas;some
 248;nicht;not
 249;oder;or
 250;hinzufügen;add
 251;Information;information
 252;in, nach, zu;to
 253;Zahl, Ziffer, Nummer;number
-254;"fragen; bitten";ask
+254;fragen, bitten;ask
 255;welche(r, s);what
-256;"Sport; Sportart";sports
+256;Sport, Sportart;sports
 257;oder;or
 258;danke;thanks
 259;Wie geht es dir?;How are you?
 260;Mädchen;girl
 261;Junge;boy
-262;ihrÛ;their
+262;ihre;their
 263;manchmal;sometimes
-264;"zusammen;gemeinsam";together
-265;"selbst;sogar";even
+264;zusammen, gemeinsam;together
+265;selbst, sogar;even
 266;Gitarre;guitar
 267;müssen;have to
 268;oft, häufig;often
 269;sprechen, reden;talk to
 270;sie, ihnen;them
-271;"sehr;viel(e)";a lot of
+271;sehr viel(e);a lot of
 272;andere(r, s);other
 273;Goldfisch;goldfish
 274;sein(e, r);his
@@ -312,20 +312,20 @@ ID;GERMAN;ENGLISH
 311;Mund;mouth
 312;Nase;nose
 313;Schulter;shoulder
-314;"Bauch; Magen";stomach
+314;Bauch, Magen;stomach
 315;Zeh(e);toe
 316;zeichnen;draw
 317;Außerirdische(r), Alien;alien
 318;dreckig, schmutzig;dirty
 319;wenn, falls;if
-320;"wissen; kennen";know
+320;wissen, kennen;know
 321;wirklich;really
 322;(sich) (ver)ändern;change
-323;saucber machen, reinigen;clean
+323;sauber machen, reinigen;clean
 324;Spigel;mirror
 325;groß;large
 326;lang;long
-327;"Antenne; Fühler";antenna
+327;Antenne, Fühler;antenna
 328;hässlich;ugly
 329;was für ein(e);what a
 330;gutaussehend;good-looking
@@ -447,25 +447,43 @@ ID;GERMAN;ENGLISH
 446;Glas;glass
 447;privater Flohmarkt (in einer Garage);garage sale
 448;frei, gratis, umsonst;free
-449;
-450;
-451;
-452;
-453;
-454;
-455;
-456;
-457;
-458;
-459;
-460;
-461;
-462;
-463;
-464;
-465;
-466;
-467;
-468;
-469;
-470;
+449;Produktion, Inszenierung;production
+450;Theatersaal, Aula;auditorium
+451;Hilfe;help
+452;Bibliothek, Bücherei;library
+453;Anrede Frau;Ms
+454;Detail, Einzelheit;detail
+455;nach;after
+456;beobachten, anschauen;watch
+457;besprechen, diskutieren;discuss
+458;werden;become
+459;offen, geöffnet;open
+460;Skateboardfahren;skateboarding
+461;Spanien;Spain
+462;Urlaub, Ferien;holiday
+463;spanisch, Spanisch;Spanish
+464;unterrichten;teach
+465;klingen, sich anhören;sound
+466;fantastisch, wunderbar;fantastic
+467;geben;give
+468;geschehen, passieren;happen
+469;lernen;learn
+470;vielleicht, möglicherweise;maybe
+471;könnte(n/st/t);could
+472;heute;today
+473;korrigieren;correct
+474;jmd möchte gern;sb would like
+475;plan;plan
+476;allein(e);on one's own
+477;Thema;topic
+478;präsentieren;present
+479;Präsentation;presentation
+480;(durch)suchen;search
+481;vorbereiten;prepare
+482;bearhbeiten, redigieren;edit
+483;üben;practise
+484;teilen;share
+485;Tier;animal
+486;Anzeige, Inserat;advert
+487;Wellensittich;budgie
+488;Känguruh;kangaroo
