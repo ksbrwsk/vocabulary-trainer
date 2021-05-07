@@ -13,7 +13,7 @@
 	<name>vocabulary-trainer</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>15</java.version>
+		<java.version>16</java.version>
 		<webjars-locator.version>0.40</webjars-locator.version>
 		<bootstrap.version>4.6.0-1</bootstrap.version>
 		<font-awesome.version>5.15.2</font-awesome.version>
