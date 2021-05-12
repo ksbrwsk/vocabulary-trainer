@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>vocabulary-trainer</artifactId>
-	<version>1.0.8</version>
+	<version>1.0.9-SNAPSHOT</version>
 	<name>vocabulary-trainer</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
