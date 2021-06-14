@@ -1,0 +1,41 @@
+<div th:fragment="next">
+    <div th:if="${model != null}">
+        <div class="card" >
+            <div class="card-body">
+                <h5 class="card-title">Vokabeltrainer</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Deutsch - Englisch</h6>
+                <form id="model" method="POST" name="model" class="form-floating" th:action="@{/result}"
+                      th:object="${model}">
+                    <input id="id" name="id" th:field="*{id}" type="hidden"/>
+                    <input id="target" name="target" th:field="*{target}" type="hidden"/>
+                    <div class="form-floating mb-4">
+                        <input class="form-control" form="model"
+                               id="source" name="source"
+                               readonly
+                               th:field="*{source}"
+                               type="text"/>
+                        <label for="source">Deutsch:</label>
+                    </div>
+                    <div class="form-floating mb-4">
+                        <input autofocus class="form-control is-invalid" form="model" required
+                               id="input"
+                               name="input"
+                               th:field="*{input}"
+                               type="text"/>
+                        <label for="input">Englisch:</label>
+
+                        <small class="form-text text-muted-error" id="messageToBeEncodedHelp"
+                               th:errors="*{input}"
+                               th:if="${#fields.hasErrors('input')}"></small>
+                    </div>
+                    <button class="btn btn-primary btn-block" data-placement="top"
+                            data-toggle="tooltip"
+                            title="pr&uuml;fen">
+                        pr&uuml;fen &raquo;
+                    </button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>

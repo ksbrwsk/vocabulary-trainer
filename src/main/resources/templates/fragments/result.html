@@ -1,0 +1,46 @@
+<div th:fragment="result">
+    <div th:if="${model != null}">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Vokabeltrainer</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Deutsch - Englisch</h6>
+
+                <form class="form-floating" id="model" method="POST" name="model" th:action="@{/result}"
+                      th:object="${model}">
+                    <input id="id" name="id" th:field="*{id}" type="hidden"/>
+                    <div class="form-floating mb-4">
+                        <input type="text" form="model"
+                               id="source" name="source"
+                               readonly
+                               class="form-control"
+                               th:field="*{source}"/>
+                        <label for="source">Deutsch</label>
+                    </div>
+                    <div class="form-floating mb-4">
+                        <input type="text" class="form-control" form="model"
+                               id="input"
+                               readonly
+                               name="input"
+                               th:field="*{input}"/>
+                        <label for="input">Englisch</label>
+                    </div>
+
+                    <div class="form-floating mb-4">
+                        <input type="text" class="form-control" form="model"
+                               id="target"
+                               name="target"
+                               readonly
+                               th:field="*{target}"/>
+                        <label for="input">L&ouml;sung</label>
+                    </div>
+                    <a autofocus class="btn btn-primary" data-placement="top" data-toggle="tooltip"
+                       href="/start"
+                       role="button"
+                       title="next">Weiter &raquo;</a>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
