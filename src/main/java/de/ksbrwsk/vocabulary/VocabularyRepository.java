@@ -31,6 +31,9 @@ public class VocabularyRepository {
 
     public VocabularyTupel random() {
         int count = this.count();
+        if(count < 0) {
+            count = 0;
+        }
         long i = random.nextInt(count);
         VocabularyTupel tupel = this.getTupel(i);
         while (tupel == null) {
