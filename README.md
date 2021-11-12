@@ -8,7 +8,7 @@ Build & run
 
 **Voraussetzungen:**
 
-* Java 15
+* Java 17
 * Apache Maven (https://maven.apache.org/)
 
 ```bash
@@ -32,7 +32,7 @@ mvn package
 und 
 
 ```bash
-java -jar target/vocabulary-trainer-1.0.0-SNAPSHOT.jar
+java -jar target/vocabulary-trainer-1.1.0.jar
 ```
 
 oder
