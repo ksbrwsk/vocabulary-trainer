@@ -1,15 +1,14 @@
 package de.ksbrwsk.vocabulary;
 
-import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
-import java.util.Collection;
 import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
 @Component
-@Log4j2
+@Slf4j
 public class VocabularyRepository {
 
     private static final ConcurrentMap<Long, VocabularyTupel> VOCABULARY = new ConcurrentHashMap<>();
@@ -31,7 +30,7 @@ public class VocabularyRepository {
 
     public VocabularyTupel random() {
         int count = this.count();
-        if(count < 0) {
+        if (count < 0) {
             count = 0;
         }
         long i = random.nextInt(count);

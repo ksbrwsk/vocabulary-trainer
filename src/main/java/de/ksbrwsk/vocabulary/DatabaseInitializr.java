@@ -1,12 +1,7 @@
 package de.ksbrwsk.vocabulary;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.log4j.Log4j2;
-import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.context.event.ApplicationReadyEvent;
-import org.springframework.context.event.EventListener;
-import org.springframework.core.io.ClassPathResource;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -20,7 +15,7 @@ import java.util.List;
 import static java.util.stream.Collectors.toList;
 
 @Component
-@Log4j2
+@Slf4j
 @RequiredArgsConstructor
 public class DatabaseInitializr {
 
@@ -45,7 +40,6 @@ public class DatabaseInitializr {
                 .map(this::splitVcTuple)
                 .map(this::createTupel)
                 .collect(toList());
-
         this.vocabularyRepository.reset();
         for (VocabularyTupel tuple : vcs) {
             this.vocabularyRepository.addTupel(tuple);

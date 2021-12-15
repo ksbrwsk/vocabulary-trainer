@@ -1,7 +1,7 @@
 package de.ksbrwsk.vocabulary;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import javax.validation.constraints.NotNull;
 
 @Controller
-@Log4j2
+@Slf4j
 @RequiredArgsConstructor
 public class VocabularyController {
 
@@ -46,20 +46,16 @@ public class VocabularyController {
     @PostMapping(value = {"result"})
     public String result(Model model, @ModelAttribute("model") VocabularyForm vocabularyForm) {
         addCommonModelAttributes(model);
-
         String input = vocabularyForm.getInput();
         String target = vocabularyForm.getTarget();
-
         String success = null;
         String error = null;
-
         if (input.equalsIgnoreCase(target)) {
             success = "Die Antwort ist richtig!";
             vocabularyForm.setNext(true);
         } else {
             error = "Die Antwort ist falsch!";
         }
-
         model.addAttribute(SUCCESS_MESSAGE, success);
         model.addAttribute(ERROR_MESSAGE, error);
         model.addAttribute("model", vocabularyForm);
