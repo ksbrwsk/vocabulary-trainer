@@ -32,7 +32,7 @@ mvn package
 und 
 
 ```bash
-java -jar target/vocabulary-trainer-1.1.0.jar
+java -jar target/vocabulary-trainer-1.2.0.jar
 ```
 
 oder
