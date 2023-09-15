@@ -1,6 +1,6 @@
 package de.ksbrwsk.vocabulary;
 
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Component;
 
 import java.util.Random;
@@ -8,7 +8,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
 @Component
-@Slf4j
+@Log4j2
 public class VocabularyRepository {
 
     private static final ConcurrentMap<Long, VocabularyTupel> VOCABULARY = new ConcurrentHashMap<>();

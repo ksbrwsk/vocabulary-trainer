@@ -1,7 +1,7 @@
 package de.ksbrwsk.vocabulary;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -15,7 +15,7 @@ import java.util.List;
 import static java.util.stream.Collectors.toList;
 
 @Component
-@Slf4j
+@Log4j2
 @RequiredArgsConstructor
 public class DatabaseInitializr {
 
