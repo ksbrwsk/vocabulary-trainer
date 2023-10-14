@@ -38,8 +38,7 @@ public class DatabaseInitializr {
                 .stream()
                 .skip(1) // headers
                 .map(this::splitVcTuple)
-                .map(this::createTupel)
-                .collect(toList());
+                .map(this::createTupel).toList();
         this.vocabularyRepository.reset();
         for (VocabularyTupel tuple : vcs) {
             this.vocabularyRepository.addTupel(tuple);
@@ -48,12 +47,10 @@ public class DatabaseInitializr {
     }
 
     private VocabularyTupel createTupel(String[] vTuple) {
-        log.info("Erzeuge Tupel -> {}", vTuple);
         return new VocabularyTupel(Long.parseLong(vTuple[0]), vTuple[1], vTuple[2]);
     }
 
     private String[] splitVcTuple(String s) {
-        log.info("Datenzeile splitten -> {}", s);
         s = s.replaceAll("(\r\n|\r)", "");
         return s.split(";");
     }
