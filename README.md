@@ -3,12 +3,14 @@
 Da im Homeschooling oft nicht die Zeit da ist, um beim Nachwuchs die Vokabeln abzuhören,
 ein simpler Vokabeltrainer (DEU->ENG)
 
+see [live demo](https://ksbrwsk.de:8080/) on my website
+
 Build & run
 -----------
 
 **Voraussetzungen:**
 
-* Java 17
+* Java 21
 * Apache Maven (https://maven.apache.org/)
 
 ```bash
