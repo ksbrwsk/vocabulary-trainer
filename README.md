@@ -57,5 +57,5 @@ Docker Image bauen und starten:
 
 ```bash
 docker build -t vocabulary-trainer .
-docker run -d --name qrcode-generator -p 8080:8080 vocabulary-trainer
+docker run -d --name vocabulary-trainer -p 8080:8080 vocabulary-trainer
 ```
