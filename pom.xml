@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.4.0</version>
+        <version>3.4.1</version>
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
     <groupId>de.ksbrwsk</groupId>
@@ -17,7 +17,7 @@
         <webjars-locator.version>0.52</webjars-locator.version>
         <bootstrap.version>5.3.3</bootstrap.version>
         <font-awesome.version>6.7.1</font-awesome.version>
-        <commons-io.version>2.17.0</commons-io.version>
+        <commons-io.version>2.18.0</commons-io.version>
         <project.scm.id>github</project.scm.id>
     </properties>
     <scm>
@@ -25,6 +25,10 @@
         <tag>HEAD</tag>
     </scm>
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
